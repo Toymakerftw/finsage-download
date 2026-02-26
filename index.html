@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinSage — Smart Finance Manager for Android</title>
+    <meta name="description"
+        content="FinSage automatically tracks your expenses by reading bank SMS. Beautiful charts, AI insights, and total privacy. All on your device." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="icons/ic_launcher.png" />
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <div class="nav-brand">
+                <div class="nav-logo">
+                    <img src="icons/ic_launcher.png" width="36" height="36" alt="FinSage"
+                        style="border-radius:10px; display:block;" />
+                </div>
+                <span class="nav-wordmark">FinSage</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#insights">Insights</a>
+                <a href="#privacy">Privacy</a>
+            </div>
+            <a href="#download" class="btn btn-nav">Get the App</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <div class="badge">🤖 Powered by Gemini AI</div>
+                <h1>Your finances,<br /><span class="gradient-text">on autopilot.</span></h1>
+                <p class="hero-sub">FinSage reads your bank SMS to automatically track every transaction. No
+                    spreadsheets. No manual entry. Just clarity.</p>
+                <div class="hero-cta">
+                    <a href="#download" class="btn btn-primary">
+                        Download for Android
+                    </a>
+                    <a href="#how-it-works" class="btn btn-ghost">See how it works →</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><span class="stat-val">100%</span><span class="stat-label">On-device</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-val">0</span><span class="stat-label">Manual entries</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-val">AI</span><span class="stat-label">Insights</span></div>
+                </div>
+            </div>
+            <div class="hero-phone">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <!-- Mock Dashboard -->
+                        <div class="mock-topbar">
+                            <div>
+                                <div class="mock-greeting">Good morning</div>
+                                <div class="mock-appname">FinSage</div>
+                            </div>
+                            <div class="mock-icons">
+                                <div class="mock-icon-btn" id="topbar-today"></div>
+                                <div class="mock-icon-btn" id="topbar-refresh"></div>
+                            </div>
+                        </div>
+                        <!-- Balance Card -->
+                        <div class="mock-card mock-balance-card">
+                            <div class="mock-balance-header">
+                                <div>
+                                    <div class="mock-label">February 2026</div>
+                                    <div class="mock-sublabel">Summary</div>
+                                </div>
+                                <div class="mock-expand">⌄</div>
+                            </div>
+                            <div class="mock-stats-row">
+                                <div class="mock-stat">
+                                    <div class="mock-stat-label">Income</div>
+                                    <div class="mock-stat-val income">₹85,000</div>
+                                </div>
+                                <div class="mock-stat-divider"></div>
+                                <div class="mock-stat">
+                                    <div class="mock-stat-label">Expenses</div>
+                                    <div class="mock-stat-val expense">₹42,310</div>
+                                </div>
+                                <div class="mock-stat-divider"></div>
+                                <div class="mock-stat">
+                                    <div class="mock-stat-label">Net</div>
+                                    <div class="mock-stat-val income">₹42,690</div>
+                                </div>
+                            </div>
+                            <div class="mock-savings-badge"><span id="savings-icon"
+                                    style="display:inline-flex;align-items:center;width:10px;height:10px;vertical-align:middle;margin-right:2px"></span>
+                                Savings: 50.2%</div>
+                        </div>
+                        <!-- Donut Section -->
+                        <div class="mock-section-title">Where your money went</div>
+                        <div class="mock-card mock-donut-card">
+                            <div class="mock-donut-wrap">
+                                <canvas id="donutChart" width="90" height="90"></canvas>
+                                <div class="mock-donut-center">
+                                    <div class="mock-donut-label">Total</div>
+                                    <div class="mock-donut-val">₹42K</div>
+                                </div>
+                            </div>
+                            <div class="mock-legend">
+                                <div class="mock-legend-item"><span class="dot" style="background:#4CAF50"></span>
+                                    <div>
+                                        <div class="mock-legend-cat">Food</div>
+                                        <div class="mock-legend-amt">₹12,400</div>
+                                    </div>
+                                </div>
+                                <div class="mock-legend-item"><span class="dot" style="background:#42A5F5"></span>
+                                    <div>
+                                        <div class="mock-legend-cat">Transport</div>
+                                        <div class="mock-legend-amt">₹8,100</div>
+                                    </div>
+                                </div>
+                                <div class="mock-legend-item"><span class="dot" style="background:#EF5350"></span>
+                                    <div>
+                                        <div class="mock-legend-cat">Shopping</div>
+                                        <div class="mock-legend-amt">₹11,200</div>
+                                    </div>
+                                </div>
+                                <div class="mock-legend-item"><span class="dot" style="background:#FFCA28"></span>
+                                    <div>
+                                        <div class="mock-legend-cat">Bills</div>
+                                        <div class="mock-legend-amt">₹7,600</div>
+                                    </div>
+                                </div>
+                                <div class="mock-legend-item"><span class="dot" style="background:#9E9E9E"></span>
+                                    <div>
+                                        <div class="mock-legend-cat">Others</div>
+                                        <div class="mock-legend-amt">₹3,010</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Transactions -->
+                        <div class="mock-section-title">Recent Activity</div>
+                        <div class="mock-tx-list">
+                            <div class="mock-tx-date">Today, 26 Feb</div>
+                            <div class="mock-tx">
+                                <div class="mock-tx-icon" style="background:#1a3a1a" id="txicon-food"></div>
+                                <div class="mock-tx-info">
+                                    <div class="mock-tx-name">Swiggy</div>
+                                    <div class="mock-tx-cat">Food</div>
+                                </div>
+                                <div class="mock-tx-amt expense">-₹485</div>
+                            </div>
+                            <div class="mock-tx">
+                                <div class="mock-tx-icon" style="background:#1a2a3a" id="txicon-transport"></div>
+                                <div class="mock-tx-info">
+                                    <div class="mock-tx-name">Ola Cab</div>
+                                    <div class="mock-tx-cat">Transport</div>
+                                </div>
+                                <div class="mock-tx-amt expense">-₹230</div>
+                            </div>
+                            <div class="mock-tx-date">Yesterday, 25 Feb</div>
+                            <div class="mock-tx">
+                                <div class="mock-tx-icon" style="background:#1a3a1a" id="txicon-income"></div>
+                                <div class="mock-tx-info">
+                                    <div class="mock-tx-name">Salary Credit</div>
+                                    <div class="mock-tx-cat">Income</div>
+                                </div>
+                                <div class="mock-tx-amt income">+₹85,000</div>
+                            </div>
+                            <div class="mock-tx">
+                                <div class="mock-tx-icon" style="background:#3a1a1a" id="txicon-shopping"></div>
+                                <div class="mock-tx-info">
+                                    <div class="mock-tx-name">Amazon</div>
+                                    <div class="mock-tx-cat">Shopping</div>
+                                </div>
+                                <div class="mock-tx-amt expense">-₹2,499</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Floating badges -->
+                <div class="floating-badge fb1">
+                    <span class="fb-icon">📲</span>
+                    <div>
+                        <div class="fb-title">SMS Detected</div>
+                        <div class="fb-sub">Auto-logged ✓</div>
+                    </div>
+                </div>
+                <div class="floating-badge fb2">
+                    <span class="fb-icon">🤖</span>
+                    <div>
+                        <div class="fb-title">AI Categorized</div>
+                        <div class="fb-sub">Food &amp; Dining</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <div class="section-label">How it works</div>
+            <h2 class="section-title">Zero friction.<br />Infinite clarity.</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <div class="step-icon-wrap" style="background: linear-gradient(135deg,#0D47A1,#42A5F5)">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z" />
+                        </svg>
+                    </div>
+                    <h3>Reads your bank SMS</h3>
+                    <p>FinSage silently monitors incoming SMS from HDFC, ICICI, SBI, Federal Bank, and more. No setup
+                        beyond one permission.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <div class="step-icon-wrap" style="background: linear-gradient(135deg,#BF360C,#FF9800)">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                        </svg>
+                    </div>
+                    <h3>Parses &amp; categorizes instantly</h3>
+                    <p>A 3-layer engine (your rules → keywords → Gemini AI) classifies every transaction the moment it
+                        arrives.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <div class="step-icon-wrap" style="background: linear-gradient(135deg,#4A148C,#AB47BC)">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                        </svg>
+                    </div>
+                    <h3>Beautiful insights appear</h3>
+                    <p>Interactive donut charts, weekly spending graphs, and monthly trends reveal patterns you never
+                        knew existed.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">04</div>
+                    <div class="step-icon-wrap" style="background: linear-gradient(135deg,#004D40,#26A69A)">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+                        </svg>
+                    </div>
+                    <h3>100% private, on-device</h3>
+                    <p>Everything stays on your phone. No cloud. No accounts. No third-party ever sees your full
+                        transaction data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section features-section" id="features">
+        <div class="container">
+            <div class="section-label">Features</div>
+            <h2 class="section-title">Everything you need.<br />Nothing you don't.</h2>
+            <div class="features-grid">
+                <div class="feature-card feature-card-wide">
+                    <div class="feature-mock">
+                        <!-- SMS auto-import visual -->
+                        <div class="sms-bubbles">
+                            <div class="sms-bubble">
+                                <div class="sms-from">HDFC Bank</div>
+                                <div class="sms-txt">INR 2,499.00 debited from A/c XX4521 on 26-02-26 at Amazon. Avl
+                                    Bal: INR 82,501.00. Call 18002586161 for dispute.</div>
+                            </div>
+                            <div class="sms-parsed-arrow">
+                                <div class="arrow-line"></div>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="#2E7D32">
+                                    <path d="M8 0l8 8-8 8V0z" />
+                                </svg>
+                            </div>
+                            <div class="sms-result">
+                                <div class="sms-result-row"><span
+                                        class="sms-result-label">Merchant</span><span>Amazon</span></div>
+                                <div class="sms-result-row"><span class="sms-result-label">Amount</span><span
+                                        class="expense">₹2,499</span></div>
+                                <div class="sms-result-row"><span class="sms-result-label">Category</span><span
+                                        class="category-chip">🛒 Shopping</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-text">
+                        <div class="feature-icon-sm">📲</div>
+                        <h3>Auto SMS Tracking</h3>
+                        <p>Supports HDFC, ICICI, SBI, Federal Bank and a universal parser for any other bank.
+                            Transactions show up before you can even open the app.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap" style="background:linear-gradient(135deg,#F57F17,#FFCA28)">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z" />
+                        </svg>
+                    </div>
+                    <h3>Smart Categorization</h3>
+                    <p>Three-layer logic: your custom rules first, then a rich keyword database, then Gemini AI as a
+                        fallback. It gets smarter the more you use it.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap" style="background:linear-gradient(135deg,#1B5E20,#4CAF50)">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                            <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z" />
+                        </svg>
+                    </div>
+                    <h3>Historical Import</h3>
+                    <p>Already have months of bank SMS? Import all of them in one tap. FinSage builds your complete
+                        financial history in seconds.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap" style="background:linear-gradient(135deg,#004D40,#26A69A)">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" />
+                        </svg>
+                    </div>
+                    <h3>Month Navigation</h3>
+                    <p>Swipe left or right to browse any previous month. The dashboard reloads instantly with that
+                        month's complete data.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap" style="background:linear-gradient(135deg,#BF360C,#FF9800)">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" />
+                        </svg>
+                    </div>
+                    <h3>Manual Entry</h3>
+                    <p>Cash transactions, UPI, or any non-SMS expense? Add it manually in seconds. Split transactions
+                        across multiple categories too.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap" style="background:linear-gradient(135deg,#0D47A1,#42A5F5)">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+                        </svg>
+                    </div>
+                    <h3>Smart Rules Engine</h3>
+                    <p>Teach FinSage once: "Swiggy → Food." It remembers forever. Rules are applied before AI, so
+                        categorization is instant and offline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSIGHTS SCREEN SHOWCASE -->
+    <section class="section insights-section" id="insights">
+        <div class="container insights-inner">
+            <div class="insights-content">
+                <div class="section-label">Insights</div>
+                <h2 class="section-title">Your money has a story.<br /><span class="gradient-text">Now you can read
+                        it.</span></h2>
+                <div class="insights-features-list">
+                    <div class="insight-feat">
+                        <div class="insight-feat-icon" id="if-barchart"></div>
+                        <div><strong>Weekly spending graph</strong>
+                            <p>See exactly which days you spend the most across 7-day windows.</p>
+                        </div>
+                    </div>
+                    <div class="insight-feat">
+                        <div class="insight-feat-icon" id="if-trending"></div>
+                        <div><strong>Monthly trends</strong>
+                            <p>Spot seasonal patterns with a 6-month rolling view of your expenses.</p>
+                        </div>
+                    </div>
+                    <div class="insight-feat">
+                        <div class="insight-feat-icon" id="if-lightbulb"></div>
+                        <div><strong>Spending forecast</strong>
+                            <p>AI predicts next month's spend based on your 3-month average — so you can plan ahead.</p>
+                        </div>
+                    </div>
+                    <div class="insight-feat">
+                        <div class="insight-feat-icon" id="if-ai"></div>
+                        <div><strong>Gemini AI analysis</strong>
+                            <p>Personalized summary + actionable suggestions generated fresh each week.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="insights-phone">
+                <div class="phone-frame phone-frame-sm">
+                    <div class="phone-screen phone-screen-insights">
+                        <div class="mock-topbar">
+                            <div class="mock-appname">Insights</div>
+                        </div>
+                        <div class="mock-section-title" style="margin-top:8px">Financial Overview</div>
+                        <div class="insights-stat-row">
+                            <div class="insights-stat-card income-card">
+                                <div class="insights-stat-label">Income</div>
+                                <div class="insights-stat-val" style="color:#A8E6A1">₹85,000</div>
+                            </div>
+                            <div class="insights-stat-card expense-card">
+                                <div class="insights-stat-label">Expenses</div>
+                                <div class="insights-stat-val" style="color:#EF9A9A">₹42,310</div>
+                            </div>
+                        </div>
+                        <div class="insights-stat-row">
+                            <div class="insights-stat-card">
+                                <div class="insights-stat-label">Savings Rate</div>
+                                <div class="insights-stat-val" style="color:#A8E6A1">50.2%</div>
+                            </div>
+                            <div class="insights-stat-card">
+                                <div class="insights-stat-label">I/E Ratio</div>
+                                <div class="insights-stat-val" style="color:#A8E6A1">2.01 ✓</div>
+                            </div>
+                        </div>
+                        <div class="mock-section-title">Weekly Spending</div>
+                        <div class="mock-card" style="padding:10px">
+                            <canvas id="lineChart" width="220" height="80"></canvas>
+                        </div>
+                        <div class="mock-section-title">Top Categories</div>
+                        <div class="mock-card" style="padding:10px">
+                            <div class="cat-bar-row">
+                                <div class="cat-bar-label"><span>Food</span><span style="color:#A8E6A1">₹12,400</span>
+                                </div>
+                                <div class="cat-bar-track">
+                                    <div class="cat-bar-fill" style="width:80%;background:#4CAF50"></div>
+                                </div>
+                            </div>
+                            <div class="cat-bar-row">
+                                <div class="cat-bar-label"><span>Shopping</span><span
+                                        style="color:#EF9A9A">₹11,200</span></div>
+                                <div class="cat-bar-track">
+                                    <div class="cat-bar-fill" style="width:72%;background:#EF5350"></div>
+                                </div>
+                            </div>
+                            <div class="cat-bar-row">
+                                <div class="cat-bar-label"><span>Transport</span><span
+                                        style="color:#90CAF9">₹8,100</span></div>
+                                <div class="cat-bar-track">
+                                    <div class="cat-bar-fill" style="width:52%;background:#42A5F5"></div>
+                                </div>
+                            </div>
+                            <div class="cat-bar-row">
+                                <div class="cat-bar-label"><span>Bills</span><span>₹7,600</span></div>
+                                <div class="cat-bar-track">
+                                    <div class="cat-bar-fill" style="width:49%;background:#FFCA28"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mock-ai-card">
+                            <div class="mock-ai-header"><span class="mock-ai-title">AI Insights</span><span
+                                    class="mock-ai-star">✨</span></div>
+                            <div class="mock-ai-body">Your food spending is 29% of total — consider meal prepping to
+                                save ₹3–4K this month. Shopping spike detected in Week 2.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ONBOARDING CAROUSEL -->
+    <section class="section onboarding-section" id="onboarding">
+        <div class="container">
+            <div class="section-label">Onboarding</div>
+            <h2 class="section-title">Up and running<br />in under a minute.</h2>
+            <div class="onboarding-carousel">
+                <div class="onboarding-slides" id="onboardingSlides">
+                    <div class="onboarding-slide active">
+                        <div class="ob-icon-wrap" style="background:linear-gradient(135deg,#1B5E20,#4CAF50)"
+                            id="ob-icon-0"></div>
+                        <h3>Welcome to FinSage</h3>
+                        <p>Your smart, private finance companion. Track expenses, gain insights, and take control of
+                            your money — all from your pocket.</p>
+                    </div>
+                    <div class="onboarding-slide">
+                        <div class="ob-icon-wrap" style="background:linear-gradient(135deg,#0D47A1,#42A5F5)"
+                            id="ob-icon-1"></div>
+                        <h3>Auto-Track Spending</h3>
+                        <p>FinSage reads your bank SMS to automatically detect and log transactions. No manual entry
+                            needed.</p>
+                    </div>
+                    <div class="onboarding-slide">
+                        <div class="ob-icon-wrap" style="background:linear-gradient(135deg,#4A148C,#AB47BC)"
+                            id="ob-icon-2"></div>
+                        <h3>Visual Insights</h3>
+                        <p>Beautiful charts and analytics help you understand where your money goes. Track spending
+                            trends by category and month.</p>
+                    </div>
+                    <div class="onboarding-slide">
+                        <div class="ob-icon-wrap" style="background:linear-gradient(135deg,#689F38,#8BC34A)"
+                            id="ob-icon-3"></div>
+                        <h3>Smart Categorization</h3>
+                        <p>AI-powered categorization learns your habits. Create custom rules to automatically sort
+                            transactions your way.</p>
+                    </div>
+                    <div class="onboarding-slide">
+                        <div class="ob-icon-wrap" style="background:linear-gradient(135deg,#004D40,#26A69A)"
+                            id="ob-icon-4"></div>
+                        <h3>Privacy First</h3>
+                        <p>All your financial data stays on your device. No cloud uploads, no third-party access. Your
+                            money, your business.</p>
+                    </div>
+                </div>
+                <div class="ob-dots" id="obDots">
+                    <div class="ob-dot active"></div>
+                    <div class="ob-dot"></div>
+                    <div class="ob-dot"></div>
+                    <div class="ob-dot"></div>
+                    <div class="ob-dot"></div>
+                </div>
+                <div class="ob-nav">
+                    <button class="ob-btn-prev" id="obPrev">←</button>
+                    <button class="ob-btn-next" id="obNext">Next →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRIVACY -->
+    <section class="section privacy-section" id="privacy">
+        <div class="container privacy-inner">
+            <div class="privacy-visual">
+                <div class="privacy-shield">
+                    <div class="shield-ring ring-1"></div>
+                    <div class="shield-ring ring-2"></div>
+                    <div class="shield-ring ring-3"></div>
+                    <div class="shield-core">🔒</div>
+                </div>
+            </div>
+            <div class="privacy-content">
+                <div class="section-label">Privacy</div>
+                <h2 class="section-title">Your data never leaves<br /><span class="gradient-text">your phone.</span>
+                </h2>
+                <div class="privacy-points">
+                    <div class="privacy-point">
+                        <div class="pp-check">✓</div>
+                        <div><strong>Local-first storage</strong>
+                            <p>Uses Room database on your device. No cloud sync, no backup servers.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-point">
+                        <div class="pp-check">✓</div>
+                        <div><strong>Local SMS parsing</strong>
+                            <p>All transaction extraction happens on-device. Your full SMS content is never transmitted
+                                anywhere.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-point">
+                        <div class="pp-check">✓</div>
+                        <div><strong>Anonymous AI requests</strong>
+                            <p>When Gemini AI is invoked, only merchant name + amount is sent — never your personal
+                                details or full SMS.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-point">
+                        <div class="pp-check">✓</div>
+                        <div><strong>No account required</strong>
+                            <p>No sign-up, no email, no password. Install and go.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD CTA -->
+    <section class="section cta-section" id="download">
+        <div class="hero-glow hero-glow-1" style="top:-100px;left:30%"></div>
+        <div class="container cta-inner">
+            <div class="cta-badge">Open Source · MIT License</div>
+            <h2 class="cta-title">Take control of your<br />finances today.</h2>
+            <p class="cta-sub">Free, open-source, and no account needed. Works with all major Indian banks.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/yourusername/finsage" class="btn btn-primary" target="_blank">
+                    Download APK
+                </a>
+                <a href="https://github.com/yourusername/finsage" class="btn btn-outline" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+            <div class="cta-banks">
+                <span>Works with:</span>
+                <div class="bank-chips">
+                    <div class="bank-chip">HDFC</div>
+                    <div class="bank-chip">ICICI</div>
+                    <div class="bank-chip">SBI</div>
+                    <div class="bank-chip">Federal</div>
+                    <div class="bank-chip">+ All others</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="nav-brand">
+                <div class="nav-logo">
+                    <img src="icons/ic_launcher.png" width="32" height="32" alt="FinSage"
+                        style="border-radius:9px; display:block;" />
+                </div>
+                <span class="nav-wordmark">FinSage</span>
+            </div>
+            <p class="footer-copy">Open source · MIT License · Built with ❤️ for privacy-first finance</p>
+        </div>
+    </footer>
+
+    <script src="icons/icons.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
