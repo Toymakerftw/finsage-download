@@ -1577,6 +1577,26 @@ body {
   grid-column: span 2;
 }
 
+.guide-card-warning {
+  border-color: rgba(230, 81, 0, 0.2);
+  background: linear-gradient(180deg, rgba(230, 81, 0, 0.04) 0%, var(--surface) 60%);
+}
+
+.guide-card-warning:hover {
+  border-color: rgba(255, 152, 0, 0.45);
+  box-shadow: 0 12px 40px rgba(230, 81, 0, 0.1);
+}
+
+.guide-card-warning .guide-tip {
+  background: rgba(230, 81, 0, 0.07);
+  border-color: rgba(230, 81, 0, 0.2);
+}
+
+.guide-feature-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
 .guide-card-inner {
   display: flex;
   gap: 28px;
