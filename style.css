@@ -11,12 +11,17 @@
   --primary: #2E7D32;
   --primary-light: #A8E6A1;
   --primary-glow: rgba(46, 125, 50, 0.25);
+  --primary-dim: rgba(46, 125, 50, 0.12);
   --bg: #0F0E0D;
   --surface: #1C1B1A;
   --surface-high: #2B2A29;
   --surface-highest: #363433;
   --on-surface: #EAE6E5;
   --on-surface-var: #CAC4CF;
+  --border: rgba(255, 255, 255, 0.08);
+  --muted: #888;
+  --warn: #FB923C;
+  --warn-dim: rgba(251, 146, 60, 0.12);
   --income: #A8E6A1;
   --expense: #EF9A9A;
   --blue: #90CAF9;
@@ -1522,7 +1527,7 @@ body {
     max-width: 300px;
   }
 
-  /* Guide */
+  /* Guide (old grid) */
   .guide-grid {
     grid-template-columns: 1fr;
   }
@@ -1541,6 +1546,38 @@ body {
 
   .guide-feature-grid-3 {
     grid-template-columns: 1fr;
+  }
+
+  /* Guide (new accordion) */
+  .guide-tabs {
+    flex-wrap: wrap;
+  }
+
+  .accord-body-inner {
+    padding: 0 16px 18px 56px;
+  }
+
+  .accord-header {
+    padding: 16px 16px;
+  }
+
+  .accord-num {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+
+  .accord-title {
+    font-size: 14px;
+  }
+
+  .substep {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .substep-num {
+    align-self: flex-start;
   }
 }
 

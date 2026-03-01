@@ -581,401 +581,485 @@
     <section class="section guide-section" id="guide">
         <div class="container">
             <div class="section-label">User Guide</div>
-            <h2 class="section-title">How to use FinSage.<br /><span class="gradient-text">Step by step.</span></h2>
+            <h2 class="section-title">How to use FinSage.<br /><span class="gradient-text">Tap to explore.</span></h2>
 
-            <div class="guide-grid">
-
-                <!-- STEP 1 -->
-                <div class="guide-card guide-card-full">
-                    <div class="guide-step-badge">01</div>
-                    <div class="guide-card-inner">
-                        <div class="guide-icon-wrap" style="background:linear-gradient(135deg,#0D47A1,#42A5F5)">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
-                            </svg>
-                        </div>
-                        <div class="guide-content">
-                            <h3>First Launch &amp; Grant SMS Permission</h3>
-                            <p>When you open FinSage for the first time, a permission prompt will appear asking to
-                                <strong>Read SMS messages</strong>. Tap <strong>"Allow"</strong> - this is the only
-                                permission FinSage needs. Without it, automatic transaction tracking cannot work.
-                            </p>
-                            <div class="guide-tips">
-                                <div class="guide-tip">
-                                    <span class="tip-icon">💡</span>
-                                    <span>If you accidentally denied the permission, go to <strong>Settings → Apps →
-                                            FinSage → Permissions → SMS → Allow</strong>.</span>
-                                </div>
-                                <div class="guide-tip">
-                                    <span class="tip-icon">🔒</span>
-                                    <span>FinSage only reads bank transaction SMS. Your personal messages are never
-                                        accessed.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- RESTRICTED SETTINGS NOTICE -->
-                <div class="guide-card guide-card-full guide-card-warning">
-                    <div class="guide-step-badge"
-                        style="background:linear-gradient(135deg,#E65100,#FF9800);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent">
-                        ⚠</div>
-                    <div class="guide-card-inner">
-                        <div class="guide-icon-wrap" style="background:linear-gradient(135deg,#E65100,#FF9800)">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-                                <path
-                                    d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
-                            </svg>
-                        </div>
-                        <div class="guide-content">
-                            <h3>Android 13+ - Bypassing "Restricted Settings"</h3>
-                            <p>In recent Android versions (13, 14 &amp; 15), Google introduced a security feature called
-                                <strong>Restricted Settings</strong>. Because FinSage is sideloaded (installed via APK
-                                rather than the Play Store), Android may automatically block sensitive permissions like
-                                SMS, displaying a popup: <em>"For your security, this setting is currently
-                                    unavailable."</em>
-                            </p>
-                            <p style="margin-top:10px">If you see this, follow these steps to unlock the permission:</p>
-                            <div class="guide-feature-grid guide-feature-grid-2" style="margin-top:16px">
-                                <div class="guide-feature-item">
-                                    <div class="gfi-icon">1️⃣</div>
-                                    <div>
-                                        <strong>Trigger the restriction</strong>
-                                        <p>Open FinSage and try to enable the SMS permission. When the <em>"For your
-                                                security…"</em> popup appears, tap <strong>OK</strong> to dismiss it.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="guide-feature-item">
-                                    <div class="gfi-icon">2️⃣</div>
-                                    <div>
-                                        <strong>Go to App Info</strong>
-                                        <p>Open <strong>Settings → Apps → See all apps</strong>, then find and tap
-                                            <strong>FinSage</strong>.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="guide-feature-item">
-                                    <div class="gfi-icon">3️⃣</div>
-                                    <div>
-                                        <strong>Allow Restricted Settings</strong>
-                                        <p>Tap the <strong>⋮ three-dot menu</strong> in the top-right corner of the App
-                                            Info page, choose <strong>"Allow restricted settings"</strong>, and
-                                            authenticate with your PIN, pattern, or fingerprint.</p>
-                                    </div>
-                                </div>
-                                <div class="guide-feature-item">
-                                    <div class="gfi-icon">4️⃣</div>
-                                    <div>
-                                        <strong>Grant the Permission</strong>
-                                        <p>Return to the <strong>Permissions</strong> section in App Info. The SMS
-                                            option will no longer be greyed out - toggle it to <strong>Allow</strong>.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="guide-tips" style="margin-top:20px">
-                                <div class="guide-tip">
-                                    <span class="tip-icon">🛡️</span>
-                                    <span>This restriction only applies to sideloaded apps. It is a standard Android
-                                        security layer - not a bug. Allowing the setting for FinSage is safe because
-                                        FinSage is open-source and does not upload your data anywhere.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- STEP 2 -->
-                <div class="guide-card">
-                    <div class="guide-step-badge">02</div>
-                    <div class="guide-icon-wrap" style="background:linear-gradient(135deg,#BF360C,#FF9800)">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-                            <path
-                                d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z" />
-                        </svg>
-                    </div>
-                    <h3>Auto SMS Tracking</h3>
-                    <p>FinSage works silently in the background. Every time your bank sends a debit or credit alert,
-                        FinSage:</p>
-                    <ul class="guide-list">
-                        <li>Detects and parses the SMS instantly</li>
-                        <li>Extracts merchant, amount, and date</li>
-                        <li>Auto-categorizes using 3-layer logic</li>
-                        <li>Saves the transaction - no action needed</li>
-                    </ul>
-                    <div class="guide-tag-row">
-                        <span class="guide-tag">HDFC</span>
-                        <span class="guide-tag">ICICI</span>
-                        <span class="guide-tag">SBI</span>
-                        <span class="guide-tag">Federal Bank</span>
-                        <span class="guide-tag">+ All other banks</span>
-                    </div>
-                </div>
-
-                <!-- STEP 3 -->
-                <div class="guide-card">
-                    <div class="guide-step-badge">03</div>
-                    <div class="guide-icon-wrap" style="background:linear-gradient(135deg,#1B5E20,#4CAF50)">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-                            <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z" />
-                        </svg>
-                    </div>
-                    <h3>Import Past Transactions</h3>
-                    <p>Already have months of bank SMS on your phone? Import everything at once:</p>
-                    <ol class="guide-list guide-list-ordered">
-                        <li>Go to the <strong>Settings</strong> tab (bottom navigation)</li>
-                        <li>Under <em>"Data &amp; Maintenance"</em>, choose your <strong>Import Period</strong> (3, 6,
-                            12 months, or All time)</li>
-                        <li>Tap <strong>"Start Import"</strong> and wait - progress is shown live</li>
-                        <li>Your full transaction history appears instantly on the Dashboard</li>
-                    </ol>
-                    <div class="guide-tips">
-                        <div class="guide-tip">
-                            <span class="tip-icon">⚡</span>
-                            <span>Import runs in the background - you can continue using the app while it works.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- STEP 4 -->
-                <div class="guide-card guide-card-full">
-                    <div class="guide-step-badge">04</div>
-                    <div class="guide-card-inner">
-                        <div class="guide-icon-wrap" style="background:linear-gradient(135deg,#4A148C,#AB47BC)">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-                                <path
-                                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
-                            </svg>
-                        </div>
-                        <div class="guide-content">
-                            <h3>Navigate the Dashboard</h3>
-                            <p>The Dashboard is your financial command center. Here's what each part does:</p>
-                            <div class="guide-feature-grid">
-                                <div class="guide-feature-item">
-                                    <div class="gfi-icon">📅</div>
-                                    <div>
-                                        <strong>Month Navigation</strong>
-                                        <p>Swipe left or right anywhere on the screen to move between months. Tap the
-                                            month title or the ⌄ icon to jump to any specific month from a picker.</p>
-                                    </div>
-                                </div>
-                                <div class="guide-feature-item">
-                                    <div class="gfi-icon">💰</div>
-                                    <div>
-                                        <strong>Balance Card</strong>
-                                        <p>Shows Income, Expenses, and Net flow for the selected month. The savings rate
-                                            badge turns green when you're saving more than you spend.</p>
-                                    </div>
-                                </div>
-                                <div class="guide-feature-item">
-                                    <div class="gfi-icon">🍩</div>
-                                    <div>
-                                        <strong>Spending Donut</strong>
-                                        <p>An interactive donut chart shows your top 4 expense categories plus "Others".
-                                            Tap any segment to see the exact amount for that category.</p>
-                                    </div>
-                                </div>
-                                <div class="guide-feature-item">
-                                    <div class="gfi-icon">📋</div>
-                                    <div>
-                                        <strong>Recent Activity</strong>
-                                        <p>All transactions grouped by date. Use the filter chip to switch between "This
-                                            Month", "Last Month", or "All Time". Tap any transaction for full details.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="guide-feature-item">
-                                    <div class="gfi-icon">🔄</div>
-                                    <div>
-                                        <strong>Refresh &amp; Jump to Today</strong>
-                                        <p>The <strong>Refresh</strong> icon re-scans SMS for any missed transactions.
-                                            The <strong>Today</strong> icon (calendar) takes you straight back to the
-                                            current month.</p>
-                                    </div>
-                                </div>
-                                <div class="guide-feature-item">
-                                    <div class="gfi-icon">🔔</div>
-                                    <div>
-                                        <strong>Quick Categorize Notifications</strong>
-                                        <p>When a new SMS is detected, you may receive a notification that lets you
-                                            instantly correct the category without ever opening the app.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- STEP 5 -->
-                <div class="guide-card">
-                    <div class="guide-step-badge">05</div>
-                    <div class="guide-icon-wrap" style="background:linear-gradient(135deg,#BF360C,#FF9800)">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-                            <path
-                                d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" />
-                        </svg>
-                    </div>
-                    <h3>Add Transactions Manually</h3>
-                    <p>For cash payments, UPI transfers without SMS, or any other expense not detected automatically:
-                    </p>
-                    <ol class="guide-list guide-list-ordered">
-                        <li>Tap the <strong>+ button</strong> in the bottom navigation bar</li>
-                        <li>Enter the <strong>amount</strong> (₹ symbol provided)</li>
-                        <li>Select <strong>Expense</strong> or <strong>Income</strong></li>
-                        <li>Pick a <strong>category</strong> - AI may suggest one automatically</li>
-                        <li>Choose the <strong>date</strong> using the calendar picker</li>
-                        <li>Optionally add a <strong>merchant name</strong> and <strong>narration</strong></li>
-                        <li>Tap <strong>"Save Transaction"</strong></li>
-                    </ol>
-                    <div class="guide-tips">
-                        <div class="guide-tip">
-                            <span class="tip-icon">🤖</span>
-                            <span>When you type a merchant name, the AI may automatically suggest the right category
-                                using a "Use suggested" chip.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- STEP 6 -->
-                <div class="guide-card">
-                    <div class="guide-step-badge">06</div>
-                    <div class="guide-icon-wrap" style="background:linear-gradient(135deg,#4A148C,#AB47BC)">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-                            <path
-                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
-                        </svg>
-                    </div>
-                    <h3>Read Your Insights</h3>
-                    <p>Tap the <strong>Insights</strong> tab to see a deep analysis of your finances:</p>
-                    <ul class="guide-list">
-                        <li><strong>Financial Overview</strong> - Income, expenses, savings rate &amp; income/expense
-                            ratio for the current month</li>
-                        <li><strong>Next Month Forecast</strong> - AI prediction based on your 3-month spending average
-                        </li>
-                        <li><strong>Weekly Spending Graph</strong> - Smooth line chart showing day-by-day spend across
-                            the week</li>
-                        <li><strong>Spending Trends</strong> - 6-month rolling bar chart to spot seasonal patterns</li>
-                        <li><strong>Top Categories</strong> - Animated progress bars ranking your biggest expense
-                            categories</li>
-                        <li><strong>AI Insights Card</strong> - Gemini-generated summary + actionable suggestions
-                            (requires API key in Settings)</li>
-                    </ul>
-                </div>
-
-                <!-- STEP 7 -->
-                <div class="guide-card guide-card-full">
-                    <div class="guide-step-badge">07</div>
-                    <div class="guide-card-inner">
-                        <div class="guide-icon-wrap" style="background:linear-gradient(135deg,#004D40,#26A69A)">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
-                            </svg>
-                        </div>
-                        <div class="guide-content">
-                            <h3>Create Smart Rules (Auto-Categorization)</h3>
-                            <p>Teach FinSage once and it remembers forever. Smart Rules let you map any merchant keyword
-                                to a category automatically - no AI needed, instant and offline.</p>
-                            <div class="guide-feature-grid guide-feature-grid-3">
-                                <div class="guide-feature-item">
-                                    <div class="gfi-icon">➕</div>
-                                    <div>
-                                        <strong>Create a Rule</strong>
-                                        <p>Go to <em>Settings → Smart Rules → tap the + FAB</em>. Enter a merchant
-                                            keyword (e.g. "Swiggy") and choose the category (e.g. "Food"). Done.</p>
-                                    </div>
-                                </div>
-                                <div class="guide-feature-item">
-                                    <div class="gfi-icon">🔁</div>
-                                    <div>
-                                        <strong>Apply to Past Transactions</strong>
-                                        <p>After creating rules, tap <strong>"Recategorize"</strong> to retroactively
-                                            apply all rules to your entire transaction history with a live progress bar.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="guide-feature-item">
-                                    <div class="gfi-icon">📊</div>
-                                    <div>
-                                        <strong>Rule Analytics</strong>
-                                        <p>Each rule shows how many transactions it matched and when it last fired - so
-                                            you can see which rules are working hardest for you.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="guide-tips" style="margin-top:20px">
-                                <div class="guide-tip">
-                                    <span class="tip-icon">⚡</span>
-                                    <span>Rules are checked <strong>before</strong> keywords &amp; AI - so they're
-                                        instant, offline, and always take priority.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- STEP 8 -->
-                <div class="guide-card">
-                    <div class="guide-step-badge">08</div>
-                    <div class="guide-icon-wrap" style="background:linear-gradient(135deg,#F57F17,#FFCA28)">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-                            <path
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
-                        </svg>
-                    </div>
-                    <h3>Enable Gemini AI</h3>
-                    <p>Unlock AI-powered categorization fallback and weekly insight summaries:</p>
-                    <ol class="guide-list guide-list-ordered">
-                        <li>Go to <strong>Settings → Intelligence &amp; AI</strong></li>
-                        <li>Toggle <strong>"Enable Gemini AI"</strong> on</li>
-                        <li>Paste your <strong>Google AI Studio API Key</strong> (free tier available)</li>
-                        <li>Tap <strong>"Save API Key"</strong></li>
-                        <li>Optionally enable <strong>"Automatic AI Insights"</strong> and pick a frequency (6h / 12h /
-                            24h / 48h)</li>
-                        <li>Tap <strong>"Generate Insights Now"</strong> for an immediate analysis</li>
-                    </ol>
-                    <div class="guide-tips">
-                        <div class="guide-tip">
-                            <span class="tip-icon">🔑</span>
-                            <span>Get a free API key at <strong>aistudio.google.com</strong>. The free tier is more than
-                                enough for personal use.</span>
-                        </div>
-                        <div class="guide-tip">
-                            <span class="tip-icon">🔒</span>
-                            <span>Only the merchant name + amount is sent to Gemini - never your full SMS or personal
-                                info.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- STEP 9: Tips & Tricks -->
-                <div class="guide-card">
-                    <div class="guide-step-badge"
-                        style="background:linear-gradient(135deg,var(--primary),#A8E6A1); -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; color:transparent">
-                        ✦</div>
-                    <div class="guide-icon-wrap" style="background:linear-gradient(135deg,#2E7D32,#A8E6A1)">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-                            <path
-                                d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z" />
-                        </svg>
-                    </div>
-                    <h3>Pro Tips &amp; Tricks</h3>
-                    <ul class="guide-list guide-list-tips">
-                        <li><strong>Long press</strong> a transaction on the dashboard for quick actions.</li>
-                        <li>Use the <strong>filter chip</strong> on Recent Activity to switch between time ranges.</li>
-                        <li>The <strong>Summary Card</strong> in Settings lets you customize which stats appear at the
-                            top of the transaction list.</li>
-                        <li>Add a <strong>home screen widget</strong> (Financial Pulse, Monthly Spending, or Recent
-                            Activity) for at-a-glance stats without opening the app.</li>
-                        <li>A savings rate above <strong>20%</strong> lights up as green - aim for it!</li>
-                        <li>The I/E ratio shows <strong>"Healthy"</strong> when income ≥ expenses. Anything below 1.0
-                            means you're spending more than you earn.</li>
-                    </ul>
-                </div>
-
+            <!-- Tab bar -->
+            <div class="guide-tabs" role="tablist">
+                <button class="guide-tab active" role="tab" data-panel="start">🚀 Quick Start</button>
+                <button class="guide-tab" role="tab" data-panel="advanced">⚙️ Advanced</button>
+                <button class="guide-tab" role="tab" data-panel="tips">✦ Tips</button>
             </div>
+
+            <!-- ── QUICK START PANEL ── -->
+            <div class="guide-panel active" id="panel-start">
+                <div class="accord-list">
+
+                    <!-- 1. SMS Permission -->
+                    <div class="accord-item">
+                        <div class="accord-header">
+                            <div class="accord-num">1</div>
+                            <div class="accord-title">Grant SMS Permission</div>
+                            <div class="accord-chevron">⌄</div>
+                        </div>
+                        <div class="accord-body">
+                            <div class="accord-body-inner">
+                                <p>On first launch, FinSage asks for <strong>Read SMS</strong> permission — tap <strong>Allow</strong>. That's the only permission needed.</p>
+                                <div class="tip"><span class="tip-icon">💡</span><span>Accidentally denied? Go to <strong>Settings → Apps → FinSage → Permissions → SMS → Allow</strong>.</span></div>
+                                <div class="tip"><span class="tip-icon">🔒</span><span>Only bank transaction SMS is ever read. Personal messages are never accessed.</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Android 13+ warning -->
+                    <div class="accord-item warn">
+                        <div class="accord-header">
+                            <div class="accord-num">⚠</div>
+                            <div class="accord-title">Android 13+ — Restricted Settings</div>
+                            <div class="accord-chevron">⌄</div>
+                        </div>
+                        <div class="accord-body">
+                            <div class="accord-body-inner">
+                                <div class="warn-notice">Sideloaded apps on Android 13/14/15 may show <em>"For your security, this setting is currently unavailable."</em> Follow these steps to unlock it.</div>
+                                <div class="substeps">
+                                    <div class="substep"><div class="substep-num">1</div><div class="substep-text">Try granting SMS permission in FinSage — dismiss the security popup by tapping <strong>OK</strong>.</div></div>
+                                    <div class="substep"><div class="substep-num">2</div><div class="substep-text">Open <strong>Settings → Apps → See all apps → FinSage</strong>.</div></div>
+                                    <div class="substep"><div class="substep-num">3</div><div class="substep-text">Tap the <strong>⋮ three-dot menu</strong> → <strong>"Allow restricted settings"</strong> → authenticate with PIN/fingerprint.</div></div>
+                                    <div class="substep"><div class="substep-num">4</div><div class="substep-text">Return to <strong>Permissions</strong> and toggle SMS to <strong>Allow</strong>.</div></div>
+                                </div>
+                                <div class="tip"><span class="tip-icon">🛡️</span><span>This is a standard Android security layer for sideloaded apps — safe to allow for FinSage since it's open-source and never uploads your data.</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Auto tracking -->
+                    <div class="accord-item">
+                        <div class="accord-header">
+                            <div class="accord-num">2</div>
+                            <div class="accord-title">Auto SMS Tracking</div>
+                            <div class="accord-chevron">⌄</div>
+                        </div>
+                        <div class="accord-body">
+                            <div class="accord-body-inner">
+                                <p>Once permission is granted, FinSage works silently in the background. Every bank alert is instantly parsed, categorized, and saved — no action needed from you.</p>
+                                <div class="tag-row">
+                                    <span class="tag">HDFC</span>
+                                    <span class="tag">ICICI</span>
+                                    <span class="tag">SBI</span>
+                                    <span class="tag">Federal Bank</span>
+                                    <span class="tag">+ All others</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Import past -->
+                    <div class="accord-item">
+                        <div class="accord-header">
+                            <div class="accord-num">3</div>
+                            <div class="accord-title">Import Past Transactions</div>
+                            <div class="accord-chevron">⌄</div>
+                        </div>
+                        <div class="accord-body">
+                            <div class="accord-body-inner">
+                                <p>Already have months of bank SMS? Import everything at once:</p>
+                                <ol>
+                                    <li>Go to the <strong>Settings</strong> tab</li>
+                                    <li>Under <em>"Data &amp; Maintenance"</em>, pick your <strong>Import Period</strong> (3, 6, 12 months, or All time)</li>
+                                    <li>Tap <strong>"Start Import"</strong> — progress is shown live</li>
+                                </ol>
+                                <div class="tip"><span class="tip-icon">⚡</span><span>Import runs in the background — you can keep using the app while it works.</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Dashboard -->
+                    <div class="accord-item">
+                        <div class="accord-header">
+                            <div class="accord-num">4</div>
+                            <div class="accord-title">Using the Dashboard</div>
+                            <div class="accord-chevron">⌄</div>
+                        </div>
+                        <div class="accord-body">
+                            <div class="accord-body-inner">
+                                <ul>
+                                    <li><strong>Swipe left/right</strong> to move between months, or tap ⌄ to jump to a specific month.</li>
+                                    <li>The <strong>Balance Card</strong> shows income, expenses, and net flow with a savings rate badge.</li>
+                                    <li>The <strong>Spending Donut</strong> breaks down your top categories — tap any segment for the exact amount.</li>
+                                    <li><strong>Recent Activity</strong> lists all transactions by date — tap any to see full details or edit.</li>
+                                    <li>The <strong>Refresh</strong> icon re-scans SMS for missed transactions; the calendar icon jumps back to today.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Manual entry -->
+                    <div class="accord-item">
+                        <div class="accord-header">
+                            <div class="accord-num">5</div>
+                            <div class="accord-title">Add a Transaction Manually</div>
+                            <div class="accord-chevron">⌄</div>
+                        </div>
+                        <div class="accord-body">
+                            <div class="accord-body-inner">
+                                <p>For cash, UPI without SMS, or any expense not auto-detected:</p>
+                                <ol>
+                                    <li>Tap the <strong>+ button</strong> in the bottom nav</li>
+                                    <li>Enter the amount, choose Expense or Income</li>
+                                    <li>Pick a category (AI may suggest one automatically)</li>
+                                    <li>Set the date and optionally add a merchant name</li>
+                                    <li>Tap <strong>"Save Transaction"</strong></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- /quick start -->
+
+            <!-- ── ADVANCED PANEL ── -->
+            <div class="guide-panel" id="panel-advanced">
+                <div class="accord-list">
+
+                    <!-- Insights -->
+                    <div class="accord-item">
+                        <div class="accord-header">
+                            <div class="accord-num">1</div>
+                            <div class="accord-title">Reading Your Insights</div>
+                            <div class="accord-chevron">⌄</div>
+                        </div>
+                        <div class="accord-body">
+                            <div class="accord-body-inner">
+                                <p>Tap the <strong>Insights</strong> tab for a deep financial analysis:</p>
+                                <ul>
+                                    <li><strong>Financial Overview</strong> — income, expenses, savings rate &amp; I/E ratio</li>
+                                    <li><strong>Next Month Forecast</strong> — AI prediction based on your 3-month average</li>
+                                    <li><strong>Weekly Spending Graph</strong> — day-by-day spend across the week</li>
+                                    <li><strong>Spending Trends</strong> — 6-month rolling chart to spot seasonal patterns</li>
+                                    <li><strong>AI Insights Card</strong> — Gemini summary + actionable suggestions (requires API key)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Smart Rules -->
+                    <div class="accord-item">
+                        <div class="accord-header">
+                            <div class="accord-num">2</div>
+                            <div class="accord-title">Smart Rules (Auto-Categorization)</div>
+                            <div class="accord-chevron">⌄</div>
+                        </div>
+                        <div class="accord-body">
+                            <div class="accord-body-inner">
+                                <p>Teach FinSage once — it remembers forever. Rules run before keywords &amp; AI, so they're instant and offline.</p>
+                                <ol>
+                                    <li>Go to <strong>Settings → Smart Rules → tap +</strong></li>
+                                    <li>Enter a merchant keyword (e.g. <em>"Swiggy"</em>) and choose a category (e.g. <em>"Food"</em>)</li>
+                                    <li>Tap <strong>"Recategorize"</strong> to retroactively apply the rule to all past transactions</li>
+                                </ol>
+                                <div class="tip"><span class="tip-icon">📊</span><span>Each rule shows how many transactions it matched and when it last fired.</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gemini AI -->
+                    <div class="accord-item">
+                        <div class="accord-header">
+                            <div class="accord-num">3</div>
+                            <div class="accord-title">Enable Gemini AI</div>
+                            <div class="accord-chevron">⌄</div>
+                        </div>
+                        <div class="accord-body">
+                            <div class="accord-body-inner">
+                                <p>Unlock AI-powered categorization and weekly insight summaries:</p>
+                                <ol>
+                                    <li>Go to <strong>Settings → Intelligence &amp; AI</strong></li>
+                                    <li>Toggle <strong>"Enable Gemini AI"</strong> on</li>
+                                    <li>Paste your <strong>Google AI Studio API Key</strong> and tap <strong>"Save"</strong></li>
+                                    <li>Optionally enable <strong>Automatic AI Insights</strong> with a schedule (6h / 12h / 24h / 48h)</li>
+                                </ol>
+                                <div class="tip"><span class="tip-icon">🔑</span><span>Get a free API key at <strong>aistudio.google.com</strong> — the free tier is more than enough for personal use.</span></div>
+                                <div class="tip"><span class="tip-icon">🔒</span><span>Only merchant name + amount is sent to Gemini — never your full SMS or personal details.</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- /advanced -->
+
+            <!-- ── TIPS PANEL ── -->
+            <div class="guide-panel" id="panel-tips">
+                <div class="accord-list">
+                    <div class="accord-item">
+                        <div class="accord-header">
+                            <div class="accord-num">✦</div>
+                            <div class="accord-title">Pro Tips &amp; Tricks</div>
+                            <div class="accord-chevron">⌄</div>
+                        </div>
+                        <div class="accord-body">
+                            <div class="accord-body-inner">
+                                <ul>
+                                    <li><strong>Long-press</strong> any transaction on the dashboard for quick actions like edit or delete.</li>
+                                    <li>Use the <strong>filter chip</strong> on Recent Activity to switch between This Month, Last Month, or All Time.</li>
+                                    <li>Add a <strong>home screen widget</strong> (Financial Pulse, Monthly Spending, or Recent Activity) for at-a-glance stats.</li>
+                                    <li>A savings rate above <strong>20%</strong> lights up green — aim for it!</li>
+                                    <li>The <strong>I/E ratio</strong> shows "Healthy" when income ≥ expenses. Below 1.0 means you're overspending.</li>
+                                    <li>The <strong>Summary Card</strong> in Settings lets you customize which stats show at the top of your transaction list.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /tips -->
+
         </div>
+
+        <style>
+            /* ── Tab bar ── */
+            .guide-tabs {
+                display: flex;
+                gap: 8px;
+                margin-bottom: 40px;
+                background: var(--surface);
+                padding: 6px;
+                border-radius: 14px;
+                border: 1px solid var(--border);
+            }
+            .guide-tab {
+                flex: 1;
+                padding: 10px 16px;
+                border: none;
+                background: transparent;
+                color: var(--muted);
+                font-family: inherit;
+                font-size: 14px;
+                font-weight: 500;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.2s;
+                text-align: center;
+            }
+            .guide-tab:hover { color: var(--text); }
+            .guide-tab.active {
+                background: var(--primary-dim);
+                color: var(--primary);
+                font-weight: 600;
+            }
+
+            /* ── Tab panels ── */
+            .guide-panel { display: none; }
+            .guide-panel.active { display: block; }
+
+            /* ── Accordion ── */
+            .accord-list { display: flex; flex-direction: column; gap: 10px; }
+
+            .accord-item {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 16px;
+                overflow: hidden;
+                transition: border-color 0.2s;
+            }
+            .accord-item.open {
+                border-color: rgba(74,222,128,0.25);
+            }
+            .accord-item.warn.open {
+                border-color: rgba(251,146,60,0.3);
+            }
+
+            .accord-header {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                padding: 18px 20px;
+                cursor: pointer;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+            }
+            .accord-header:hover .accord-title { color: var(--primary); }
+            .accord-item.warn .accord-header:hover .accord-title { color: var(--warn); }
+
+            .accord-num {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+                font-weight: 700;
+                flex-shrink: 0;
+                background: var(--primary-dim);
+                color: var(--primary);
+            }
+            .accord-item.warn .accord-num {
+                background: var(--warn-dim);
+                color: var(--warn);
+            }
+
+            .accord-title {
+                flex: 1;
+                font-size: 15px;
+                font-weight: 600;
+                transition: color 0.2s;
+            }
+
+            .accord-chevron {
+                color: var(--muted);
+                font-size: 18px;
+                transition: transform 0.25s;
+                flex-shrink: 0;
+            }
+            .accord-item.open .accord-chevron { transform: rotate(180deg); }
+
+            /* ── Body ── */
+            .accord-body {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1);
+            }
+            .accord-body-inner {
+                padding: 0 20px 22px 66px;
+                font-size: 14px;
+                line-height: 1.75;
+                color: #bbb;
+            }
+
+            .accord-body-inner p { margin-bottom: 14px; }
+            .accord-body-inner p:last-child { margin-bottom: 0; }
+
+            /* ordered list */
+            .accord-body-inner ol {
+                padding-left: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                margin-bottom: 14px;
+            }
+            .accord-body-inner ol li { padding-left: 4px; }
+
+            /* unordered list */
+            .accord-body-inner ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                margin-bottom: 14px;
+            }
+            .accord-body-inner ul li::before {
+                content: '→';
+                color: var(--primary);
+                margin-right: 8px;
+            }
+            .accord-item.warn .accord-body-inner ul li::before { color: var(--warn); }
+
+            .accord-body-inner strong { color: var(--text); font-weight: 600; }
+            .accord-body-inner em { color: var(--muted); font-style: italic; }
+
+            /* tip pill */
+            .tip {
+                display: flex;
+                gap: 10px;
+                align-items: flex-start;
+                background: rgba(255,255,255,0.04);
+                border-radius: 10px;
+                padding: 10px 14px;
+                margin-top: 10px;
+                font-size: 13px;
+                color: #aaa;
+            }
+            .tip + .tip { margin-top: 6px; }
+            .tip-icon { flex-shrink: 0; }
+
+            /* warning notice block */
+            .warn-notice {
+                background: var(--warn-dim);
+                border: 1px solid rgba(251,146,60,0.2);
+                border-radius: 10px;
+                padding: 14px 16px;
+                margin-bottom: 16px;
+                font-size: 13px;
+                line-height: 1.6;
+                color: #e5b68a;
+            }
+
+            /* sub-steps inside warning */
+            .substeps {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin: 14px 0;
+            }
+            .substep {
+                display: flex;
+                gap: 12px;
+                align-items: flex-start;
+                font-size: 13px;
+            }
+            .substep-num {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: var(--warn-dim);
+                color: var(--warn);
+                font-size: 11px;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                border: 1px solid rgba(251,146,60,0.3);
+            }
+            .substep-text { color: #bbb; line-height: 1.6; }
+
+            /* tag row */
+            .tag-row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+                margin-top: 12px;
+            }
+            .tag {
+                background: rgba(255,255,255,0.06);
+                border: 1px solid var(--border);
+                border-radius: 20px;
+                padding: 3px 12px;
+                font-size: 12px;
+                color: var(--muted);
+            }
+        </style>
+
+        <script>
+            // ── Tabs ──
+            document.querySelectorAll('.guide-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    document.querySelectorAll('.guide-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.guide-panel').forEach(p => p.classList.remove('active'));
+                    tab.classList.add('active');
+                    document.getElementById('panel-' + tab.dataset.panel).classList.add('active');
+                });
+            });
+
+            // ── Accordion ──
+            document.querySelectorAll('.accord-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    const item = header.parentElement;
+                    const body = item.querySelector('.accord-body');
+                    const isOpen = item.classList.contains('open');
+
+                    // close all in this panel
+                    const panel = item.closest('.guide-panel');
+                    panel.querySelectorAll('.accord-item').forEach(i => {
+                        i.classList.remove('open');
+                        i.querySelector('.accord-body').style.maxHeight = null;
+                    });
+
+                    if (!isOpen) {
+                        item.classList.add('open');
+                        body.style.maxHeight = body.scrollHeight + 'px';
+                    }
+                });
+            });
+        </script>
     </section>
 
     <!-- DOWNLOAD CTA -->
