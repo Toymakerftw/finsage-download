@@ -33,7 +33,7 @@
                 <a href="#privacy">Privacy</a>
                 <a href="#guide">Guide</a>
             </div>
-            <a href="#download" class="btn btn-nav">Get the App</a>
+            <a href="#" class="btn btn-nav" onclick="openDownloadModal(event)">Get the App</a>
         </div>
     </nav>
 
@@ -48,7 +48,7 @@
                 <p class="hero-sub">FinSage reads your bank SMS to automatically track every transaction. No
                     spreadsheets. No manual entry. Just clarity.</p>
                 <div class="hero-cta">
-                    <a href="#download" class="btn btn-primary">
+                    <a href="#" class="btn btn-primary" onclick="openDownloadModal(event)">
                         Download for Android
                     </a>
                     <a href="#how-it-works" class="btn btn-ghost">See how it works →</a>
@@ -634,7 +634,8 @@
                                 <strong>Restricted Settings</strong>. Because FinSage is sideloaded (installed via APK
                                 rather than the Play Store), Android may automatically block sensitive permissions like
                                 SMS, displaying a popup: <em>"For your security, this setting is currently
-                                    unavailable."</em></p>
+                                    unavailable."</em>
+                            </p>
                             <p style="margin-top:10px">If you see this, follow these steps to unlock the permission:</p>
                             <div class="guide-feature-grid guide-feature-grid-2" style="margin-top:16px">
                                 <div class="guide-feature-item">
@@ -651,7 +652,8 @@
                                     <div>
                                         <strong>Go to App Info</strong>
                                         <p>Open <strong>Settings → Apps → See all apps</strong>, then find and tap
-                                            <strong>FinSage</strong>.</p>
+                                            <strong>FinSage</strong>.
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="guide-feature-item">
@@ -984,7 +986,7 @@
             <h2 class="cta-title">Take control of your<br />finances today.</h2>
             <p class="cta-sub">Free, open-source, and no account needed. Works with all major Indian banks.</p>
             <div class="cta-buttons">
-                <a href="https://github.com/yourusername/finsage" class="btn btn-primary" target="_blank">
+                <a href="#" class="btn btn-primary" onclick="openDownloadModal(event)">
                     Download APK
                 </a>
                 <a href="https://github.com/yourusername/finsage" class="btn btn-outline" target="_blank">
@@ -1021,6 +1023,26 @@
             <p class="footer-copy">Open source · MIT License · Built with ❤️ for privacy-first finance</p>
         </div>
     </footer>
+
+    <!-- DOWNLOAD MODAL -->
+    <div class="modal-overlay" id="downloadModal" style="display:none;">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h2 class="modal-title">Download FinSage</h2>
+
+            <div id="latestVersionContainer">
+                <!-- Injected via script.js -->
+                <div class="modal-loading">Loading releases...</div>
+            </div>
+
+            <div class="older-versions-container">
+                <h3 class="older-title">Older Versions</h3>
+                <div id="olderVersionsList" class="older-list">
+                    <!-- Injected via script.js -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="icons/icons.js"></script>
     <script src="script.js"></script>

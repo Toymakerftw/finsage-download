@@ -243,3 +243,122 @@ window.addEventListener('load', () => {
     drawLineChart();
     injectAppIcons();
 });
+
+/* ===== DOWNLOAD MODAL ===== */
+const modal = document.getElementById('downloadModal');
+const closeBtn = document.getElementById('modalClose');
+
+function openDownloadModal(e) {
+    if (e) e.preventDefault();
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    loadDownloads();
+}
+
+function closeDownloadModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+if (closeBtn) closeBtn.addEventListener('click', closeDownloadModal);
+
+// Close on outside click
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeDownloadModal();
+    }
+});
+
+// Close on Escape key
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') {
+        closeDownloadModal();
+    }
+});
+
+async function loadDownloads() {
+    const latestContainer = document.getElementById('latestVersionContainer');
+    const olderContainer = document.querySelector('.older-versions-container');
+    const olderList = document.getElementById('olderVersionsList');
+
+    try {
+        const response = await fetch('downloads/downloads.json');
+        if (!response.ok) throw new Error('Network response was not ok');
+        const downloads = await response.json();
+        
+        if (!downloads || downloads.length === 0) {
+            latestContainer.innerHTML = '<div class="modal-loading">No releases found.</div>';
+            return;
+        }
+
+        const latest = downloads[0];
+        
+        // Fetch changelog text
+        let changelogText = 'Initial release.';
+        try {
+            const clRes = await fetch(latest.changelogPath);
+            if (clRes.ok) {
+                changelogText = await clRes.text();
+            }
+        } catch (e) {
+            console.error('Could not load changelog');
+        }
+
+        // Format changelog as list
+        const lines = changelogText.split('\n').filter(l => l.trim().length > 0);
+        let formattedChangelog = '';
+        if (lines.length > 0) {
+            formattedChangelog = `<p>${lines[0]}</p><ul>`;
+            for (let i = 1; i < lines.length; i++) {
+                formattedChangelog += `<li>${lines[i].replace(/^- /, '')}</li>`;
+            }
+            formattedChangelog += `</ul>`;
+        } else {
+            formattedChangelog = `<p>${changelogText}</p>`;
+        }
+
+        latestContainer.innerHTML = `
+            <div class="latest-version-card">
+                <div class="latest-header">
+                    <span class="latest-badge">LATEST</span>
+                    <span class="latest-date">${formatDate(latest.date)}</span>
+                </div>
+                <div class="latest-title">FinSage v${latest.version}</div>
+                <div class="latest-changelog">
+                    ${formattedChangelog}
+                </div>
+                <a href="${latest.apkPath}" class="dl-btn" download>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    </svg>
+                    Download APK
+                </a>
+            </div>
+        `;
+
+        if (downloads.length > 1) {
+            olderContainer.style.display = 'block';
+            olderList.innerHTML = downloads.slice(1).map(dl => `
+                <div class="older-item">
+                    <div class="older-info">
+                        <span class="older-ver">v${dl.version}</span>
+                        <span class="older-date">${formatDate(dl.date)}</span>
+                    </div>
+                    <a href="${dl.apkPath}" class="older-dl" download>Download</a>
+                </div>
+            `).join('');
+        } else {
+            olderContainer.style.display = 'none';
+        }
+
+    } catch (error) {
+        console.error('Error loading downloads:', error);
+        latestContainer.innerHTML = '<div class="modal-loading">Failed to load releases. Please check GitHub.</div>';
+    }
+}
+
+function formatDate(dateString) {
+    const options = { year: 'numeric', month: 'short', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+}
+

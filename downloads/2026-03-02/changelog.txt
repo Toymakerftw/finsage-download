@@ -1,0 +1,10 @@
+FinSage v3.0.0 Features & Improvements:
+- Added comprehensive credit card detection and EMI tracking 
+- Expanded bank support to 23+ banks with new parser patterns
+- Implemented multi-account tracking and historical balance calculation
+- Added tutorials for accounts and budget features
+- Improved Budget tracking and dedicated Settings screen
+- Privacy-First: Gemini AI and Insights disabled by default
+- Refined Dashboard with running balance and initial balance settings
+- Fixed widget rendering and prevented text overflow on smaller screens
+- Updated documentation and README
