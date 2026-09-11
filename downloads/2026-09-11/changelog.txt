@@ -1,0 +1,9 @@
+FinSage v3.1.0 Features & Improvements:
+- Added dynamic Material You colors for all home screen widgets
+- Refactored UI cards and Dashboard with solid dynamic Material You styling
+- Added Gemini API key setup guide card in Settings
+- High-performance SMS import with cursor streaming (prevents OOM on large message histories)
+- Auto-apply Smart Rules retroactively across matching transactions
+- Enhanced budget tracking with support for negative balances and over-budget usage (>100%)
+- Streamlined transaction tracking and core financial analytics
+- Release build stability improvements with local JDK 17 configuration
